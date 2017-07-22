@@ -363,14 +363,20 @@ class ImportPython(Operator, ImportHelper):
       
 def open_py(filepath):
 
-    Scenename = bpy.context.scene.name
-
+    console.push("import bpy")
+    console.push("Scenename =" + '"' +bpy.context.scene.name + '"')
+        
     file = open(filepath, "r") 
 
     for line in file: 
         line = line.strip()
-        if not (line.startswith("bpy.ops.render.") or line.startswith("bpy.ops.wm.quit")): 
-        	console.push(line)
+        if ("bpy.data.scenes") in line:
+            if (".render.") in line: 
+                console.push(line)
+            if (".cycles") in line:
+                console.push(line)
+            if (".frame") in line:
+                console.push(line)
     
     return {'FINISHED'}
 
