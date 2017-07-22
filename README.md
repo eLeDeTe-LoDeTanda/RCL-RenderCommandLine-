@@ -1,5 +1,8 @@
 # RCL-RenderCommandLine-
-BLENDER addon     ---- Render from the command line ---- Render desde linea de comando ---
+BLENDER addon     
+-- Render from the command line --
+
+-- Render desde linea de comando --
 
 For Blender 2.78
 
