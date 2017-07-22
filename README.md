@@ -5,6 +5,8 @@ Render desde linea de comando
 
 For Blender **2.78**
 
+![RCL-RenderCommandLine](https://github.com/eLeDeTe-LoDeTanda/RCL-RenderCommandLine-/blob/master/RCL-RenderCommandLine-.png)
+
 **How to Install**
 * Download the latest [RCL-RenderCommandLine-.py](https://github.com/eLeDeTe-LoDeTanda/RCL-RenderCommandLine-/blob/master/RCL-RenderCommandLine-.py)
 * In Blender: File menu > User Preferences > Add-ons
