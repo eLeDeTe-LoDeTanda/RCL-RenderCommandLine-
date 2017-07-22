@@ -15,7 +15,7 @@ For Blender **2.78**
 * Go to Render properties, find: RCL -Render Command Line-
 
 **Como corno se instala**
-* Descargar la versión más reciente de: [RCL-RenderCommandLine-.py](https://github.com/eLeDeTe-LoDeTanda/RCL-RenderCommandLine-/blob/master/RCL-RenderCommandLine-.py)
+* Descargar la versión más reciente de: [RCL-RenderCommandLine-.py](https://github.com/eLeDeTe-LoDeTanda/RCL-RenderCommandLine-/raw/master/RCL-RenderCommandLine-.py)
 * En Blender: File menu > User Preferences > Add-ons
 * Ir a la pestaña Add-ons. Seleccionar en "Install from File", buscar el archivo RCL-RenderCommandLine-.py .
 * En la pestaña Add-ons > Render activar "RCL -Render Command Line-"
