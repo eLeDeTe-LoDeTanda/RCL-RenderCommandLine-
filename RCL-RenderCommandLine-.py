@@ -26,7 +26,7 @@ bl_info = {
     "author": "Marcelo 'Tanda' Cerviño",
     "version": (1, 0),
     "blender": (2, 78),
-    "location": "Render > Render Command Line",
+    "location": "Render > RCL -Render Command Line-",
     "description": "RENDER in terminal, IMPORT and EXPORT (executable .sh or .bat) some RENDER OPTIONS",
     "warning": "",
     "wiki_url": "https://github.com/eLeDeTe-LoDeTanda/RCL-RenderCommandLine-",
