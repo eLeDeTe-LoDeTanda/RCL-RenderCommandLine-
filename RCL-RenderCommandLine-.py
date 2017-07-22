@@ -34,6 +34,8 @@ bl_info = {
     "category": "Render",
 }
 
+##################################################################
+
 import bpy
 
 __addon_name__ = "RCL -Render Command Line-"
@@ -56,7 +58,7 @@ class RCLPanel(bpy.types.Panel):
         
         if blendsaved:
             row = layout.row()
-            row.operator("export.cl", text="Command Line")
+            row.operator("export.txt", text="Command Line")
             row.operator("export.py", text="Python")
         else: layout.label(text="***Blend file is not saved***")
         
@@ -83,7 +85,7 @@ from bpy.types import Operator
 
 class ExportCommandLine(Operator, ExportHelper):
 
-    bl_idname = "export.cl"
+    bl_idname = "export.txt"
     bl_label = "Export Render options"
 
     filename_ext = ".txt"
