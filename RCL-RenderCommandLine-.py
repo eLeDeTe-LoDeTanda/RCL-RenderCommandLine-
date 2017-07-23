@@ -370,14 +370,19 @@ def open_py(filepath):
 
     for line in file: 
         line = line.strip()
-        if ("bpy.data.scenes") in line:
-            if (".render.") in line: 
+        if "bpy.data.scenes" in line:
+            if ".render." in line: 
+                print("Render options imported: ")
                 console.push(line)
-            if (".cycles") in line:
+                print(line)
+            if ".cycles" in line:
+                print("Cycles options imported: ")
                 console.push(line)
-            if (".frame") in line:
+                print(line)
+            if ".frame" in line:
+                print("Frame options imported: ")
                 console.push(line)
-    
+                print(line)
     return {'FINISHED'}
 
 ##################################################################  
