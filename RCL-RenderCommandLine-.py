@@ -174,6 +174,8 @@ def write_cl(filepath):
     
         st = os.stat(filepath + ".sh")
         os.chmod(filepath + ".sh", st.st_mode | stat.S_IEXEC)
+        
+        print("Command line autorun saved in: " + filepath)
            
     return {'FINISHED'}
 
@@ -335,6 +337,8 @@ def write_py(filepath):
         st = os.stat(filepath + ".sh")
         os.chmod(filepath + ".sh", st.st_mode | stat.S_IEXEC)
 
+    print("python script and autorun saved in: " + filepath)
+    
     return {'FINISHED'}
   
 ##################################################################
@@ -383,6 +387,9 @@ def open_py(filepath):
                 print("Frame options imported: ")
                 console.push(line)
                 print(line)
+                
+    print("Render options imported from: " + filepath)  
+                
     return {'FINISHED'}
 
 ##################################################################  
@@ -411,7 +418,7 @@ def open_terminal():
             "call " + cmd)
             
 		file.close()
-
+    
 		os.system("start cmd /k " + bpy.app.tempdir + "RCL_tmp.bat")
 	else: os.system("x-terminal-emulator -e " + cmd + "&")
 
