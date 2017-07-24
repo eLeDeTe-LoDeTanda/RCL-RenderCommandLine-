@@ -195,7 +195,7 @@ def write_py(filepath):
         "# Scene Name"+"\n"
         "Scenename = " + '"' + Scenename + '"' + "\n" 
         + "\n"
-        "# Render Quality"+"\n"
+        "# Render Quality" + "\n"
         "bpy.data.scenes[Scenename].render.resolution_x = %s" 
         % (bpy.data.scenes[Scenename].render.resolution_x) + "\n" 
         "bpy.data.scenes[Scenename].render.resolution_y = %s" 
