@@ -1,9 +1,10 @@
 # RCL-RenderCommandLine- BLENDER add-on  
-RENDER in terminal, IMPORT and EXPORT (executable .sh or .bat) some RENDER OPTIONS
+RENDER in terminal, IMPORT and EXPORT (autorun .sh or .bat) some RENDER OPTIONS
 
 RENDERIZAR en terminal, IMPORTAR y EXPORTAR (ejecutable .sh o .bat) algunas opciones de RENDER 
 
 For Blender **2.78**
+
 Para Blender **2.78**
 
 ![RCL-RenderCommandLine](https://github.com/eLeDeTe-LoDeTanda/RCL-RenderCommandLine-/blob/master/RCL-RenderCommandLine-.png)
