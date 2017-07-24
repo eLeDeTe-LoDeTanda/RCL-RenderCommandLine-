@@ -243,7 +243,7 @@ def write_py(filepath):
         "bpy.data.scenes[Scenename].render.image_settings.compression = %s" 
         % (bpy.data.scenes[Scenename].render.image_settings.compression) + "\n" 
         "bpy.data.scenes[Scenename].render.image_settings.color_mode = " + '"' 
-	    + bpy.data.scenes[Scenename].render.image_settings.color_mode + '"' + "\n" 
+        + bpy.data.scenes[Scenename].render.image_settings.color_mode + '"' + "\n" 
         "bpy.data.scenes[Scenename].render.image_settings.color_depth = " + '"' + "%s" 
         % (bpy.data.scenes[Scenename].render.image_settings.color_depth) + '"' + "\n" 
         "bpy.data.scenes[Scenename].render.use_file_extension = %s" 
