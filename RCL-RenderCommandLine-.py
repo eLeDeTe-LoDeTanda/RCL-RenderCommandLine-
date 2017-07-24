@@ -42,7 +42,6 @@ __addon_name__ = "RCL -Render Command Line-"
 __url__ = "https://github.com/eLeDeTe-LoDeTanda/RCL-RenderCommandLine-"
 
 class RCLPanel(bpy.types.Panel):
-  
     bl_label = __addon_name__
     bl_idname = "RENDER_PT_RCL"
     bl_space_type = 'PROPERTIES'
@@ -84,7 +83,6 @@ from bpy.props import StringProperty
 from bpy.types import Operator
 
 class ExportCommandLine(Operator, ExportHelper):
-
     bl_idname = "export.txt"
     bl_label = "Export Render options"
 
@@ -117,7 +115,6 @@ class ExportPython(Operator, ExportHelper):
 
         
 def write_cl(filepath):
-    
     Scenename = bpy.context.scene.name
     
     if sys.platform.startswith("win"): 
@@ -181,7 +178,6 @@ def write_cl(filepath):
 
 
 def write_py(filepath):
-    
     Scenename = bpy.context.scene.name
 
     file = open(filepath, 'w', newline='\r\n', encoding='utf-8')
@@ -367,7 +363,6 @@ class ImportPython(Operator, ImportHelper):
     
       
 def open_py(filepath):
-
     console.push("import bpy")
     console.push("Scenename =" + '"' +bpy.context.scene.name + '"')
         
@@ -398,7 +393,6 @@ def open_py(filepath):
 import sys 
 
 class RenderTerminal(bpy.types.Operator):
-    
     bl_idname = "render.terminal"
     bl_label = "Render in terminal"
 
@@ -406,8 +400,8 @@ class RenderTerminal(bpy.types.Operator):
         write_py(bpy.app.tempdir + "RCL_tmp.py")
         return open_terminal()
 
-def open_terminal():
 
+def open_terminal():
     cmd = '"' + bpy.app.binary_path + '"' + " -b " + '"' + bpy.data.filepath 
     + '"' + " -P " + '"' + bpy.app.tempdir + "RCL_tmp.py" + '"'
     
