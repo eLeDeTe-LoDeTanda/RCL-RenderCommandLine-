@@ -29,9 +29,7 @@ Buscar en las propiedades de render el panel **"RCL -Render Command Line-"**
 
 # Opciones de render disponibles
 
-in **python script**:
-
-en **python script**:
+in **python script**:  en **python script**:
 
 
 **Scene Name:**
@@ -90,9 +88,7 @@ step
 
 -------------------
 
-in **Command line**:
-
-en **linea de comando**:
+in **Command line**:  en **linea de comando**:
 
 
 **-b  -S  -o  -E  -F  -x  -t  -s  -e  -j  -a**
