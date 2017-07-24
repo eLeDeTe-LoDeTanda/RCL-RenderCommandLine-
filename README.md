@@ -22,3 +22,105 @@ Para Blender **2.78**
 * Ir a la pestaña **"Add-ons"**. Seleccionar en **"Install from File"**, buscar el archivo **"RCL-RenderCommandLine-.py"**.
 * En la pestaña **"Add-ons > Render" activar "RCL -Render Command Line-"**
 Buscar en las propiedades de render el panel **"RCL -Render Command Line-"**
+
+-------------------
+
+# Render Option availables
+
+# Opciones de render disponibles
+
+in **python script**:
+
+en **python script**:
+
+
+**Scene Name:**
+
+Scenename
+
+**Render Quality:**
+
+resolution
+
+percentage
+
+antialiasing
+
+tile
+
+threads
+
+engine
+
+cycles samples
+
+**Post processing:**
+
+dither
+
+compositing
+
+sequencer
+
+**Output:**
+
+Render output
+
+placeholder
+
+overwrite
+
+format
+
+extension
+
+render_cache
+
+**Stamp:**
+
+stamp
+
+**Render frames:**
+
+start
+
+end
+
+step
+
+-------------------
+
+in **Command line**:
+
+en **linea de comando**:
+
+
+**-b  -S  -o  -E  -F  -x  -t  -s  -e  -j  -a**
+
+**Scene Name:**
+
+Scenename
+
+**Render Quality:**
+
+threads
+
+engine
+
+**Output:**
+
+Render output
+
+format
+
+extension
+
+**Render frames:**
+
+start
+
+end
+
+step
+
+-------------------
