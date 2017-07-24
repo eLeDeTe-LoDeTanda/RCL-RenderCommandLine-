@@ -97,7 +97,7 @@ class ExportCommandLine(Operator, ExportHelper):
     def execute(self, context):
         return write_cl(self.filepath)
 
-      
+
 class ExportPython(Operator, ExportHelper):
     bl_idname = "export.py"
     bl_label = "Export Render options"
@@ -113,7 +113,7 @@ class ExportPython(Operator, ExportHelper):
     def execute(self, context):
         return write_py(self.filepath)
 
-        
+      
 def write_cl(filepath):
     Scenename = bpy.context.scene.name
     
@@ -138,7 +138,6 @@ def write_cl(filepath):
             + " -j %s" % (bpy.data.scenes[Scenename].frame_step) 
             + " -a"
             )
-        
         file.close()
     
         st = os.stat(filepath + ".bat")
@@ -166,7 +165,6 @@ def write_cl(filepath):
             + " -j %s" % (bpy.data.scenes[Scenename].frame_step) 
             + " -a"
             )
-        
         file.close()
     
         st = os.stat(filepath + ".sh")
@@ -383,8 +381,7 @@ def write_py(filepath):
         "bpy.ops.render.render(animation=True,scene=Scenename)" + "\n" 
         "\n"
         "####################################"
-        )
-        
+        )   
     file.close()
     
     cmd = '"' + bpy.app.binary_path + '"' + " -b " + '"' + bpy.data.filepath + '"' + " -P " + '"' + filepath + '"'
@@ -421,7 +418,6 @@ import code
 
 namespace = {}
 console = code.InteractiveConsole(locals=namespace, filename="<blender_console>")
-
 
 class ImportPython(Operator, ImportHelper):
     bl_idname = "import.py"
