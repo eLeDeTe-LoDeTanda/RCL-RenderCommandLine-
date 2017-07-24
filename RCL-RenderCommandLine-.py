@@ -313,7 +313,8 @@ def write_py(filepath):
 
     file.close()
     
-    cmd = '"' + bpy.app.binary_path + '"' + " -b " + '"' + bpy.data.filepath + '"' + " -P " + '"' + filepath + '"'
+    cmd = '"' + bpy.app.binary_path + '"' + " -b " + '"' + bpy.data.filepath 
+    + '"' + " -P " + '"' + filepath + '"'
 
     if sys.platform.startswith("win"): 
         file = open(filepath + ".bat", 'w', encoding='utf-8')
