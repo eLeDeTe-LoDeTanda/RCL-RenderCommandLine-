@@ -309,8 +309,7 @@ def write_py(filepath):
 
     file.close()
     
-    cmd = '"' + bpy.app.binary_path + '"' + " -b " + '"' + bpy.data.filepath 
-    + '"' + " -P " + '"' + filepath + '"'
+    cmd = '"' + bpy.app.binary_path + '"' + " -b " + '"' + bpy.data.filepath + '"' + " -P " + '"' + filepath + '"'
 
     if sys.platform.startswith("win"): 
         file = open(filepath + ".bat", 'w', encoding='utf-8')
@@ -402,8 +401,7 @@ class RenderTerminal(bpy.types.Operator):
 
 
 def open_terminal():
-    cmd = '"' + bpy.app.binary_path + '"' + " -b " + '"' + bpy.data.filepath 
-    + '"' + " -P " + '"' + bpy.app.tempdir + "RCL_tmp.py" + '"'
+    cmd = '"' + bpy.app.binary_path + '"' + " -b " + '"' + bpy.data.filepath + '"' + " -P " + '"' + bpy.app.tempdir + "RCL_tmp.py" + '"'
     
     if sys.platform.startswith("win"):
         file = open(bpy.app.tempdir + "RCL_tmp.bat", 'w', encoding='utf-8')
