@@ -192,7 +192,7 @@ def write_py(filepath):
         "import bpy" + "\n" + "\n"
         "# Render Options to change" + "\n"
         "############################" + "\n" + "\n" 
-        "# Scene Name"+"\n"
+        "# Scene Name" + "\n"
         "Scenename = " + '"' + Scenename + '"' + "\n" 
         + "\n"
         "# Render Quality" + "\n"
