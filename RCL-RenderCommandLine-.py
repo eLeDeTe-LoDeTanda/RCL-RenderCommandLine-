@@ -231,7 +231,7 @@ def write_py(filepath):
         % (bpy.data.scenes[Scenename].render.use_sequencer) + "\n" 
         + "\n"
 
-        "# Output"+"\n"
+        "# Output" + "\n"
         "bpy.data.scenes[Scenename].render.filepath = " + '"' 
         + bpy.data.scenes[Scenename].render.filepath + '"' + "\n"
         "bpy.data.scenes[Scenename].render.use_placeholder = %s" 
@@ -252,7 +252,7 @@ def write_py(filepath):
         % (bpy.data.scenes[Scenename].render.use_render_cache) + "\n" 
         + "\n"
 
-        "# Stamp"+"\n"
+        "# Stamp" + "\n"
         "bpy.data.scenes[Scenename].render.use_stamp = %s" 
         % (bpy.data.scenes[Scenename].render.use_stamp) + "\n" 
         "bpy.data.scenes[Scenename].render.stamp_font_size = %s" 
@@ -299,7 +299,7 @@ def write_py(filepath):
         % (bpy.data.scenes[Scenename].render.use_stamp_strip_meta) + "\n" 
         + "\n"
 
-        "# Render frames"+"\n"
+        "# Render frames" + "\n"
         "bpy.data.scenes[Scenename].frame_start = %s" 
         % (bpy.data.scenes[Scenename].frame_start) + "\n" 
         "bpy.data.scenes[Scenename].frame_end = %s" 
