@@ -5,7 +5,7 @@ RENDERIZAR en terminal, IMPORTAR y EXPORTAR (ejecutable .sh o .bat) algunas opci
 
 Tested in Blender **2.78 - 2.79**
 
-Probado en Blender **2.78 - 2.79-**
+Probado en Blender **2.78 - 2.79**
 
 ![RCL-RenderCommandLine](https://github.com/eLeDeTe-LoDeTanda/RCL-RenderCommandLine-/blob/master/RCL-RenderCommandLine-.png)
 
