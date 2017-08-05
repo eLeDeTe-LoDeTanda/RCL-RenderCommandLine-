@@ -3,9 +3,9 @@ RENDER in terminal, IMPORT and EXPORT (autorun .sh or .bat) some RENDER OPTIONS
 
 RENDERIZAR en terminal, IMPORTAR y EXPORTAR (ejecutable .sh o .bat) algunas opciones de RENDER 
 
-Tested in Blender **2.78 - 2.79**
+Tested in Blender **2.78 - 2.79** (Linux and Windows)
 
-Probado en Blender **2.78 - 2.79**
+Probado en Blender **2.78 - 2.79** (Linux y Windows)
 
 ![RCL-RenderCommandLine](https://github.com/eLeDeTe-LoDeTanda/RCL-RenderCommandLine-/blob/master/RCL-RenderCommandLine-.png)
 
