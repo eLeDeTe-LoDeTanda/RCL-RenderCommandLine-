@@ -143,7 +143,7 @@ def write_cl(filepath):
         st = os.stat(filepath + ".bat")
         os.chmod(filepath + ".bat", st.st_mode | stat.S_IEXEC)        
 
-    else:  
+    elif sys.platform.startswith("linux") or sys.platform.startswith("darwin"):
         file = open(filepath + ".sh", 'w', encoding='utf-8')
 
         file.write(
@@ -395,7 +395,7 @@ def write_py(filepath):
         "call " + cmd)
         
         file.close()
-    else:  
+    elif sys.platform.startswith("linux") or sys.platform.startswith("darwin"):
         file = open(filepath + ".sh", 'w', encoding='utf-8')
         
         file.write(
@@ -489,8 +489,9 @@ def open_terminal():
         
         os.system("start cmd /k " + bpy.app.tempdir + "RCL_tmp.bat")
         
-    else: os.system("x-terminal-emulator -e " + cmd + "&")
-        
+    elif sys.platform.startswith("linux"): os.system("x-terminal-emulator -e " + cmd + "&")
+    elif sys.platform.startswith("darwin"): os.system("open -a Terminal" + cmd + "&")
+            
     return {'FINISHED'}
 
 ##################################################################
