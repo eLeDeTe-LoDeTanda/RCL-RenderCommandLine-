@@ -25,7 +25,7 @@ Buscar en las propiedades de render el panel **"RCL -Render Command Line-"**
 
 -------------------
 
-# Render Option availables
+# Render Options availables
 
 # Opciones de render disponibles
 
