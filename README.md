@@ -21,7 +21,7 @@ Probado en Blender **2.78 - 2.79** (Linux y Windows, Mac no tested)
 * En Blender: **"File menu > User Preferences > Add-ons"**
 * Ir a la pestaña **"Add-ons"**. Seleccionar en **"Install from File"**, buscar el archivo **"RCL-RenderCommandLine-.py"**.
 * En la pestaña **"Add-ons > Render" activar "RCL -Render Command Line-"**
-Buscar en las propiedades de render el panel **"RCL -Render Command Line-"**
+* Buscar en las propiedades de render el panel **"RCL -Render Command Line-"**
 
 -------------------
 
