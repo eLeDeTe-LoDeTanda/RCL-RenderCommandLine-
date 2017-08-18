@@ -24,8 +24,8 @@
 bl_info = {
     "name": "RCL -Render Command Line-",
     "author": "Marcelo 'Tanda' Cerviño",
-    "version": (1, 0),
-    "blender": (2, 78),
+    "version": (1, 1),
+    "blender": (2, 79),
     "location": "Render > RCL -Render Command Line-",
     "description": "RENDER in terminal, IMPORT and EXPORT (executable .sh or .bat) some RENDER OPTIONS",
     "warning": "",
@@ -47,32 +47,37 @@ class RCLPanel(bpy.types.Panel):
     bl_space_type = 'PROPERTIES'
     bl_region_type = 'WINDOW'
     bl_context = "render"
-
+    
     def draw(self, context):
         layout = self.layout
-
+        
         blendsaved = os.path.dirname(bpy.data.filepath)
 
-        layout.label(text="-EXPORT render options to FILE:")
+        layout.label(text="Import or export render options:")
         
-        if blendsaved:
-            row = layout.row()
-            row.operator("export.txt", text="Command Line")
-            row.operator("export.py", text="Python")
-        else: layout.label(text="***Blend file is not saved***")
-        
-        layout.label(text="-IMPORT render options:")
-        row = layout.row()
-        row.operator("import.py", text="From Python Script")
-        
-        layout.label(text="Start render in background:")
+        split = layout.split()
+
+        col = split.column()
+        sub = col.column(align=True)
+                
+        sub.label(text="Import:")
+        sub.operator("import.py", text="From Python")
 
         if blendsaved:
-            row = layout.row()
-            row.scale_y = 3
-            row.operator("render.terminal", text="RENDER in Terminal")
-        else: layout.label(text="***Blend file is not saved***")
+            col = split.column()
+            sub = col.column(align=True)
+            sub.label(text="Export:")
+            sub.operator("export.txt", text="To Command Line")
+            sub.operator("export.py", text="To Python")
+        else: layout.label(text="Blend file is not saved")
+        
+def render_terminal_button(self, context): 
+        rd = context.scene.render
+        layout = self.layout
 
+        row = layout.row(align=True)
+        row.operator("render.terminal", text="Render in Terminal", icon='CONSOLE')
+    
 ##################################################################
 
 import os
@@ -95,7 +100,9 @@ class ExportCommandLine(Operator, ExportHelper):
         )
 
     def execute(self, context):
-        return write_cl(self.filepath)
+        write_cl(self.filepath)
+        self.report({'INFO'}, "Command line autorun saved in: " + self.filepath)
+        return {'FINISHED'}
 
 
 class ExportPython(Operator, ExportHelper):
@@ -111,7 +118,9 @@ class ExportPython(Operator, ExportHelper):
         )
 
     def execute(self, context):
-        return write_py(self.filepath)
+        write_py(self.filepath)
+        self.report({'INFO'}, "Python script and autorun saved in: " + self.filepath)
+        return {'FINISHED'}
 
       
 def write_cl(filepath):
@@ -169,7 +178,6 @@ def write_cl(filepath):
         st = os.stat(filepath + ".sh")
         os.chmod(filepath + ".sh", st.st_mode | stat.S_IEXEC)
         
-        print("Command line autorun saved in: " + filepath) 
     elif sys.platform.startswith("darwin") :
         file = open(filepath + ".sh", 'w', encoding='utf-8')
 
@@ -196,8 +204,6 @@ def write_cl(filepath):
     
         st = os.stat(filepath + ".sh")
         os.chmod(filepath + ".sh", st.st_mode | stat.S_IEXEC)
-        
-        print("Command line autorun saved in: " + filepath)
            
     return {'FINISHED'}
 
@@ -446,9 +452,6 @@ def write_py(filepath):
 
         st = os.stat(filepath + ".sh")
         os.chmod(filepath + ".sh", st.st_mode | stat.S_IEXEC)
-
-    print("python script and autorun saved in: " + filepath)
- 
     
     return {'FINISHED'}
   
@@ -472,7 +475,9 @@ class ImportPython(Operator, ImportHelper):
         )
 
     def execute(self, context):
-        return open_py(self.filepath)
+        open_py(self.filepath)
+        self.report({'INFO'}, "Render options imported from: " + self.filepath)
+        return {'FINISHED'}
     
       
 def open_py(filepath):
@@ -496,9 +501,7 @@ def open_py(filepath):
                 print("Frame options imported: ")
                 console.push(line)
                 print(line)
-                
-    print("Render options imported from: " + filepath)  
-                
+                   
     return {'FINISHED'}
 
 ##################################################################  
@@ -510,8 +513,16 @@ class RenderTerminal(bpy.types.Operator):
     bl_label = "Render in terminal"
 
     def execute(self, context):
-        write_py(bpy.app.tempdir + "RCL_tmp.py")
-        return open_terminal()
+        blendsaved = os.path.dirname(bpy.data.filepath)
+        if blendsaved:
+            write_py(bpy.app.tempdir + "RCL_tmp.py")
+            open_terminal()
+            self.report({'INFO'}, "Rendering in background you can close Blender")
+            return {'FINISHED'}
+        else:
+            self.report({'WARNING'}, "Blend file is not saved")
+            return {'FINISHED'}
+
 
 
 def open_terminal():
@@ -538,9 +549,11 @@ def open_terminal():
      
 def register():
     bpy.utils.register_module(__name__)
+    bpy.types.RENDER_PT_render.append(render_terminal_button)
 
 def unregister():
     bpy.utils.unregister_module(__name__)
+    bpy.types.RENDER_PT_render.remove(render_terminal_button)
 
 if __name__ == "__main__":
     register()
