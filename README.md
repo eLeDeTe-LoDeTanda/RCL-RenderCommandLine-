@@ -15,14 +15,14 @@ Probado en Blender **2.78 - 2.79** (Linux y Windows, Mac no tested)
 * In Blender: **"File menu > User Preferences > Add-ons"**
 * Switch to the **"Add-ons"** tab. Click on the **"Install from File"**, look for the **"RCL-RenderCommandLine-.py"** file.
 * in **"Add-ons > Render"** enable **"RCL -Render Command Line-"**
-* Go to Render properties, find the panel **"RCL -Render Command Line-"** and in Render panel the button **"Render in terminal"**.
+* Go to Render properties, find the panel **"RCL -Render Command Line-"** and in "Render" panel the button **"Render in Terminal"**.
 
 **Como corno se instala:**
 * Descargar la versión más reciente de: [RCL-RenderCommandLine-.py](https://github.com/eLeDeTe-LoDeTanda/RCL-RenderCommandLine-/raw/master/RCL-RenderCommandLine-.py)
 * En Blender: **"File menu > User Preferences > Add-ons"**
 * Ir a la pestaña **"Add-ons"**. Seleccionar en **"Install from File"**, buscar el archivo **"RCL-RenderCommandLine-.py"**.
 * En la pestaña **"Add-ons > Render"** activar **"RCL -Render Command Line-"**
-* Buscar en las propiedades de render el panel **"RCL -Render Command Line-"** y en el panel de Render el botón **"Render in terminal"**.
+* Buscar en las propiedades de render el panel **"RCL -Render Command Line-"** y en el panel de "Render" el botón **"Render in Terminal"**.
 
 -------------------
 
