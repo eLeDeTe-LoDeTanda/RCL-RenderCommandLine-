@@ -26,6 +26,11 @@ Probado en Blender **2.78 - 2.79** (Linux y Windows, Mac no tested)
 
 -------------------
 
+[-Video Test-](https://www.youtube.com/watch?v=9mnMKc7QdMY)
+
+-------------------
+
+
 # Render Options availables
 
 # Opciones de render disponibles
