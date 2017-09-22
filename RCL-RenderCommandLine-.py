@@ -53,7 +53,7 @@ class RCLPanel(bpy.types.Panel):
         
         blendsaved = os.path.dirname(bpy.data.filepath)
 
-        layout.label(text="Import or export render options:")
+        layout.label(text="Render options:")
         
         split = layout.split()
 
