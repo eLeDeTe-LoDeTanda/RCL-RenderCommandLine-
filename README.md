@@ -7,8 +7,9 @@ Tested in Blender **2.78 - 2.79** (Linux and Windows, Mac no tested)
 
 Probado en Blender **2.78 - 2.79** (Linux y Windows, Mac no tested)
 
-![RCL-Import/export](https://github.com/eLeDeTe-LoDeTanda/RCL-RenderCommandLine-/blob/master/RCL-panel.png)
-![RCL-Render in terminal](https://github.com/eLeDeTe-LoDeTanda/RCL-RenderCommandLine-/blob/master/RCL-renderpanel.png)
+![RCL-CommandLineOptions](https://github.com/eLeDeTe-LoDeTanda/RCL-RenderCommandLine-/blob/master/RCL-Panel-1.png)
+![RCL-PythonOptions](https://github.com/eLeDeTe-LoDeTanda/RCL-RenderCommandLine-/blob/master/RCL-Panel-2.png)
+![RCL-Render in terminal](https://github.com/eLeDeTe-LoDeTanda/RCL-RenderCommandLine-/blob/master/RCL-RenderPanel.png)
 
 **How to Install:**
 * Download the latest [RCL-RenderCommandLine-.py](https://github.com/eLeDeTe-LoDeTanda/RCL-RenderCommandLine-/raw/master/RCL-RenderCommandLine-.py)
