@@ -26,6 +26,7 @@ Probado en Blender **2.78 - 2.79** (Linux y Windows, Mac no tested)
 * Buscar en las propiedades de render el panel **"RCL -Render Command Line-"** y en el panel "Render" el botón **"Render in Terminal"**.
 
 -------------------
+[-Video Test- v1.2](https://youtu.be/6PXEk8NP3p0)
 
 [-Video Test- v1.0](https://www.youtube.com/watch?v=9mnMKc7QdMY)
 
